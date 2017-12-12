@@ -15,7 +15,7 @@ namespace Ocelog.Formatting.Logstash.Test
         {
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .Select(LogstashJson.Process)
                 .Subscribe(log => output.Add(log))
                 );
@@ -36,7 +36,7 @@ namespace Ocelog.Formatting.Logstash.Test
 
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .AddTimestamp(timestamp)
                 .Select(LogstashJson.Process)
                 .Subscribe(log => output.Add(log))
@@ -56,7 +56,7 @@ namespace Ocelog.Formatting.Logstash.Test
 
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .Select(LogstashJson.Process)
                 .Subscribe(log => output.Add(log))
                 );
@@ -76,7 +76,7 @@ namespace Ocelog.Formatting.Logstash.Test
 
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .AddFields(new { MyField = 34 })
                 .AddFields(new { OtherField = "Hello" })
                 .Select(LogstashJson.Process)
@@ -98,7 +98,7 @@ namespace Ocelog.Formatting.Logstash.Test
 
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .AddTag("mytag")
                 .AddTag("mytag2")
                 .AddTagsToAdditionalFields()
@@ -120,7 +120,7 @@ namespace Ocelog.Formatting.Logstash.Test
 
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .AddCallerInfoToAdditionalFields()
                 .Select(LogstashJson.Process)
                 .Subscribe(log => output.Add(log))
@@ -141,7 +141,7 @@ namespace Ocelog.Formatting.Logstash.Test
 
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .AddLevelToAdditionalFields()
                 .Select(LogstashJson.Process)
                 .Subscribe(log => output.Add(log))
@@ -162,7 +162,7 @@ namespace Ocelog.Formatting.Logstash.Test
 
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .AddLevelToTags()
                 .AddTagsToAdditionalFields()
                 .Select(LogstashJson.Process)
@@ -182,7 +182,7 @@ namespace Ocelog.Formatting.Logstash.Test
         {
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .AddFields(new { Things = new[] { "A", "B" } })
                 .AddFields(new { Things = new[] { "C" } })
                 .Select(LogstashJson.Process)
@@ -202,7 +202,7 @@ namespace Ocelog.Formatting.Logstash.Test
         {
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .AddFields(new { Things = new { A = 1, B = 2 } })
                 .AddFields(new { Things = new { C = 3 } })
                 .Select(LogstashJson.Process)
@@ -222,7 +222,7 @@ namespace Ocelog.Formatting.Logstash.Test
         {
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .AddFields(new { Things = new Dictionary<string, int> { { "A", 1 }, { "B", 2 } } })
                 .AddFields(new { Things = new Dictionary<string, int> { { "C", 3 } } })
                 .Select(LogstashJson.Process)
@@ -241,7 +241,7 @@ namespace Ocelog.Formatting.Logstash.Test
         {
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .AddFields(new { Thing = "Hello" })
                 .Select(LogstashJson.Process)
                 .Subscribe(log => output.Add(log))
@@ -259,7 +259,7 @@ namespace Ocelog.Formatting.Logstash.Test
         {
             var output = new List<ProcessedLogEvent>();
 
-            Logger logger = new Logger(logEvents => logEvents
+            var logger = new Logger(logEvents => logEvents
                 .Select(LogstashJson.Process)
                 .Subscribe(log => output.Add(log))
                 );
