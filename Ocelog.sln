@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelog.Test", "test\Ocelog.Test\Ocelog.Test.csproj", "{B624E3B4-C5AA-41AD-80A2-C486BE6F5E66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelog.Test", "test\Ocelog.Test\Ocelog.Test.csproj", "{B624E3B4-C5AA-41AD-80A2-C486BE6F5E66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelog.Formatting.Logstash.Test", "test\Ocelog.Formatting.Logstash.Test\Ocelog.Formatting.Logstash.Test.csproj", "{AB8C0B65-ADB2-4F0A-9296-4F19CB73A7DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelog.Formatting.Logstash.Test", "test\Ocelog.Formatting.Logstash.Test\Ocelog.Formatting.Logstash.Test.csproj", "{AB8C0B65-ADB2-4F0A-9296-4F19CB73A7DD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{905B33F6-43B4-4438-A03F-C6B77DB236BD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F68118B9-0251-41F7-BF05-627970A20FAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelog.Transport.UDP.Test", "test\Ocelog.Transport.UDP.Test\Ocelog.Transport.UDP.Test.csproj", "{E47E1E65-3327-448C-B895-B514405FC65A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelog.Transport.UDP.Test", "test\Ocelog.Transport.UDP.Test\Ocelog.Transport.UDP.Test.csproj", "{E47E1E65-3327-448C-B895-B514405FC65A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelog.Testing.Test", "test\Ocelog.Testing.Test\Ocelog.Testing.Test.csproj", "{B0DB94C0-03C7-433A-8BFF-A135175B2746}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelog.Testing.Test", "test\Ocelog.Testing.Test\Ocelog.Testing.Test.csproj", "{B0DB94C0-03C7-433A-8BFF-A135175B2746}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelog", "src\Ocelog\Ocelog.csproj", "{79B941D4-8B91-467B-B9FD-3374413FF9D7}"
 EndProject
@@ -24,6 +24,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelog.Formatting.Logstash", "src\Ocelog.Formatting.Logstash\Ocelog.Formatting.Logstash.csproj", "{8C80CF2B-FF4E-4549-80A2-9B66768508A6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelog.Formatting.Json", "src\Ocelog.Formatting.Json\Ocelog.Formatting.Json.csproj", "{203019B7-EC1A-49A1-BE2E-9B0D4BC1105E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelog.AspNetCore", "src\Ocelog.AspNetCore\Ocelog.AspNetCore.csproj", "{0F0153A5-9B28-4DB6-8B4A-713BC8A2BE90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelog.AspNetCore.Tests", "test\Ocelog.AspNetCore.Tests\Ocelog.AspNetCore.Tests.csproj", "{F2680674-0EE3-4F22-82A0-E43ECA76D583}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +71,14 @@ Global
 		{203019B7-EC1A-49A1-BE2E-9B0D4BC1105E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{203019B7-EC1A-49A1-BE2E-9B0D4BC1105E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{203019B7-EC1A-49A1-BE2E-9B0D4BC1105E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F0153A5-9B28-4DB6-8B4A-713BC8A2BE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F0153A5-9B28-4DB6-8B4A-713BC8A2BE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F0153A5-9B28-4DB6-8B4A-713BC8A2BE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F0153A5-9B28-4DB6-8B4A-713BC8A2BE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2680674-0EE3-4F22-82A0-E43ECA76D583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2680674-0EE3-4F22-82A0-E43ECA76D583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2680674-0EE3-4F22-82A0-E43ECA76D583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2680674-0EE3-4F22-82A0-E43ECA76D583}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +93,8 @@ Global
 		{1864EB30-09E4-43E3-BEFE-C0867150F41D} = {905B33F6-43B4-4438-A03F-C6B77DB236BD}
 		{8C80CF2B-FF4E-4549-80A2-9B66768508A6} = {905B33F6-43B4-4438-A03F-C6B77DB236BD}
 		{203019B7-EC1A-49A1-BE2E-9B0D4BC1105E} = {905B33F6-43B4-4438-A03F-C6B77DB236BD}
+		{0F0153A5-9B28-4DB6-8B4A-713BC8A2BE90} = {905B33F6-43B4-4438-A03F-C6B77DB236BD}
+		{F2680674-0EE3-4F22-82A0-E43ECA76D583} = {F68118B9-0251-41F7-BF05-627970A20FAE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA5E9E26-CBBA-44A6-B67E-DBD18640C47E}
